@@ -1,6 +1,4 @@
 #include <iostream>
-#include <GLFW/glfw3.h>
-
 #include "Log.h"
 #include "Player.h"
 #include "Entity.h"
