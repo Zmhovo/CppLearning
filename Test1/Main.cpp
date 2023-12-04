@@ -1,6 +1,4 @@
 #include <iostream>
-#include <GLFW/glfw3.h>
-
 #include "Log.h"
 #include "Player.h"
 #include "Entity.h"
@@ -121,6 +119,8 @@ int main()
 	int a = glfwInit();
 	std::cout << a << std::endl;
 
+
+	std::cout << "" << std::endl;
 
 	std::cout << "" << std::endl;
 	std::cout << "Waiting..." << std::endl;
