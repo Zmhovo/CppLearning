@@ -117,13 +117,6 @@ int main()
 
 	std::cout << "" << std::endl;
 
-
-	int a = glfwInit();
-	std::cout << a << std::endl;
-
-
-	std::cout << "" << std::endl;
-
 	std::cout << "" << std::endl;
 	std::cout << "Waiting..." << std::endl;
 	std::cin.get();
