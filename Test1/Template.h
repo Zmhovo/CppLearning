@@ -11,12 +11,12 @@ void Print(T value)
 	std::cout << value << std::endl;
 }
 
-template<int N>
+template<typename T,int N>
 
 class Template
 {
 private:
-	int m_Array[N];
+	T m_Array[N];
 
 public:
 	int GetSize() const { return N };
