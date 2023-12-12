@@ -45,6 +45,8 @@ int main()
 
 	std::cout << "" << std::endl;
 
+	//Array
+	std::cout << "Array" << std::endl;
 
 	Array arr;
 	std::cout << arr.example[2] << std::endl;
@@ -52,6 +54,12 @@ int main()
 	std::cout << arr.example[2] << std::endl;
 	std::cout << arr.another[2] << std::endl;
 	
+	std::array<int, 3> arr2 = { 0, 0 ,0 };
+	arr2[0] = 2;
+	arr2[1] = 4;
+	arr2[2] = 6;
+	std::cout << arr2.size() << std::endl;
+
 	std::vector<Vertex> vertices;          //动态数组
 	//vertices.push_back({ 1,2,3 });          push_back()用于创建临时对象存放{ 1,2,3 }，再拷贝放入vertices
 	//vertices.push_back({ 4,5,6 });
@@ -66,7 +74,6 @@ int main()
 	{
 		std::cout << vertices[i] << std::endl;
 	}
-
 
 	std::cout << "" << std::endl;
 
@@ -114,7 +121,6 @@ int main()
 			copy = sharePointer;          //weak_ptr不会增加引用计数 此时为1
 		}          //此时为0
 	}
-
 
 	Template<std::string, 5> template_Array;
 	std::cout << template_Array.GetSize() << std::endl;
