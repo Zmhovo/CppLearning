@@ -8,6 +8,7 @@
 #include "String.h"
 #include "Const.h"
 #include "SmartPointer.h"
+#include "Template.h"
 
 
 
@@ -115,12 +116,8 @@ int main()
 	}
 
 
-	std::cout << "" << std::endl;
-
-
-	int a = glfwInit();
-	std::cout << a << std::endl;
-
+	Template<std::string, 5> template_Array;
+	std::cout << template_Array.GetSize() << std::endl;
 
 	std::cout << "" << std::endl;
 
