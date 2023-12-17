@@ -9,6 +9,7 @@
 #include "Const.h"
 #include "SmartPointer.h"
 #include "Template.h"
+#include "Thread.h"
 
 
 
@@ -44,9 +45,7 @@ int main()
 
 
 	std::cout << "" << std::endl;
-
-	//Array
-	std::cout << "Array" << std::endl;
+	std::cout << "================================  Array  ================================" << std::endl;
 
 	Array arr;
 	std::cout << arr.example[2] << std::endl;
@@ -122,10 +121,25 @@ int main()
 		}          //此时为0
 	}
 
+
+	std::cout << "" << std::endl;
+	std::cout << "================================  Template  ================================" << std::endl;
+
 	Template<std::string, 5> template_Array;
 	std::cout << template_Array.GetSize() << std::endl;
 
+
 	std::cout << "" << std::endl;
+	std::cout << "================================  Thread  ================================" << std::endl;
+	std::thread worker(DoWork);          //创建了一个std::thread对象worker，并启动了一个新线程来运行Dowork函数
+	
+	std::cin.get();
+
+	s_Finished = true;
+
+	worker.join();          //join()——等待work表示的线程结束
+	std::cout << "Finished!" << std::endl;
+	std::cout << "Started thread id = " << std::this_thread::get_id() << std::endl;
 
 	std::cout << "" << std::endl;
 	std::cout << "Waiting..." << std::endl;
