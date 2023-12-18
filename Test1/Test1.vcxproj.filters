@@ -45,6 +45,9 @@
     <ClCompile Include="Sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Union.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Log.h">
@@ -78,6 +81,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Union.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

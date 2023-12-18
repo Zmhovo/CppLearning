@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __LOG_H__
+#define __LOG_H__
 #include <iostream>
 
 void LogOutput(const char* message);
@@ -23,3 +24,5 @@ public:
 
 	void Info(const char* message);          //ÏûÏ¢
 };
+
+#endif // !__LOG_H__
