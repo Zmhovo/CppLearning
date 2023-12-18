@@ -10,6 +10,7 @@
 #include "SmartPointer.h"
 #include "Template.h"
 #include "Thread.h"
+#include "Time.h"
 
 
 
@@ -140,6 +141,28 @@ int main()
 	worker.join();          //join()——等待work表示的线程结束
 	std::cout << "Finished!" << std::endl;
 	std::cout << "Started thread id = " << std::this_thread::get_id() << std::endl;
+
+
+	std::cout << "" << std::endl;
+	std::cout << "================================  Time  ================================" << std::endl;
+	using namespace std::literals::chrono_literals;
+	
+	auto start_time = std::chrono::high_resolution_clock::now();          //当前时间
+	std::this_thread::sleep_for(2s);
+	auto end_time = std::chrono::high_resolution_clock::now();
+
+	std::chrono::duration<float> duration = end_time - start_time;          //duration高精度
+	
+	std::cout << duration.count() << "s" << std::endl;
+
+	{
+		Timer timer;
+		for (int i = 0; i < 10; i++)
+		{
+			std::cout << i << " ";
+		}
+		std::cout << "" << std::endl;
+	}
 
 	std::cout << "" << std::endl;
 	std::cout << "Waiting..." << std::endl;
