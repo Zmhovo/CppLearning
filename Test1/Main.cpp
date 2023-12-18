@@ -11,6 +11,7 @@
 #include "Template.h"
 #include "Thread.h"
 #include "Time.h"
+#include "Sort.h"
 
 
 
@@ -163,6 +164,18 @@ int main()
 		}
 		std::cout << "" << std::endl;
 	}
+
+
+	std::cout << "" << std::endl;
+	std::cout << "================================  Sort  ================================" << std::endl;
+	std::vector<int> sort_vectors = { 3,1,6,5,2 };
+	std::sort(sort_vectors.begin(), sort_vectors.end());          //对于整数，默认升序排序
+
+	for (int i = 0; i < sort_vectors.size(); i++)
+	{
+		std::cout << sort_vectors[i] << " ";
+	}
+	std::cout << "" << std::endl;
 
 	std::cout << "" << std::endl;
 	std::cout << "Waiting..." << std::endl;

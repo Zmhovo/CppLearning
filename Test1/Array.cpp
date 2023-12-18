@@ -18,7 +18,7 @@ Array::~Array()
 {
 }
 
-std::ostream& operator<<(std::ostream& stream, const Vertex& vertex)
+std::ostream& operator<<(std::ostream& stream, const Vertex & vertex)
 {
 	stream << vertex.x << "," << vertex.y << "," << vertex.z;
 
