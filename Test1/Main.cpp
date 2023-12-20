@@ -12,6 +12,7 @@
 #include "Thread.h"
 #include "Time.h"
 #include "Sort.h"
+#include "Union.h"
 
 
 
@@ -175,7 +176,21 @@ int main()
 	{
 		std::cout << sort_vectors[i] << " ";
 	}
+
+
 	std::cout << "" << std::endl;
+	std::cout << "================================  Union  ================================" << std::endl;
+	Union1 u1;
+	u1.a = 2.0f;
+	std::cout << u1.a << "," << u1.b << std::endl;          //union用于类型双关：输出“2,1073741824”是浮点数形式“2”的字节表示
+
+	Union3 u3 = { 1.0f,2.0f,3.0f,4.0f };
+	PrintUnion2(u3.a);
+	PrintUnion2(u3.b);
+	u3.z = 66.00f;
+	std::cout << "---------------------------" << std::endl;
+	PrintUnion2(u3.a);
+	PrintUnion2(u3.b);
 
 	std::cout << "" << std::endl;
 	std::cout << "Waiting..." << std::endl;
